@@ -1,0 +1,181 @@
+var _ = require('lodash');
+
+var people = [{
+  "id": 1,
+  "first_name": "Merilee",
+  "last_name": "Rudiger",
+  "email": "mrudiger0@cbc.ca",
+  "gender": "Female",
+  "ip_address": "200.219.195.83"
+}, {
+  "id": 2,
+  "first_name": "Harlan",
+  "last_name": "Brecknock",
+  "email": "hbrecknock1@typepad.com",
+  "gender": "Male",
+  "ip_address": "116.32.174.47"
+}, {
+  "id": 3,
+  "first_name": "Osborne",
+  "last_name": "Mitchel",
+  "email": "omitchel2@youtu.be",
+  "gender": "Male",
+  "ip_address": "96.126.245.74"
+}, {
+  "id": 4,
+  "first_name": "Devin",
+  "last_name": "Mellodey",
+  "email": "dmellodey3@livejournal.com",
+  "gender": "Male",
+  "ip_address": "131.75.104.230"
+}, {
+  "id": 5,
+  "first_name": "Aaren",
+  "last_name": "Rappoport",
+  "email": "arappoport4@auda.org.au",
+  "gender": "Female",
+  "ip_address": "25.217.60.193"
+}, {
+  "id": 6,
+  "first_name": "Terese",
+  "last_name": "Curror",
+  "email": "tcurror5@dropbox.com",
+  "gender": "Female",
+  "ip_address": "19.69.25.53"
+}, {
+  "id": 7,
+  "first_name": "Dulcie",
+  "last_name": "Sawfoot",
+  "email": "dsawfoot6@discovery.com",
+  "gender": "Female",
+  "ip_address": "96.155.14.62"
+}, {
+  "id": 8,
+  "first_name": "Karry",
+  "last_name": "Oleksinski",
+  "email": "koleksinski7@seesaa.net",
+  "gender": "Female",
+  "ip_address": "30.106.24.2"
+}, {
+  "id": 9,
+  "first_name": "Knox",
+  "last_name": "Chance",
+  "email": "kchance8@seattletimes.com",
+  "gender": "Male",
+  "ip_address": "248.100.229.3"
+}, {
+  "id": 10,
+  "first_name": "Berrie",
+  "last_name": "Cotsford",
+  "email": "bcotsford9@stanford.edu",
+  "gender": "Female",
+  "ip_address": "189.210.85.114"
+}, {
+  "id": 11,
+  "first_name": "Harlan",
+  "last_name": "Roget",
+  "email": "hrogeta@shutterfly.com",
+  "gender": "Male",
+  "ip_address": "86.88.96.224"
+}, {
+  "id": 12,
+  "first_name": "Leola",
+  "last_name": "Harriday",
+  "email": "lharridayb@1688.com",
+  "gender": "Female",
+  "ip_address": "50.66.41.85"
+}, {
+  "id": 13,
+  "first_name": "Deina",
+  "last_name": "Albro",
+  "email": "dalbroc@t.co",
+  "gender": "Female",
+  "ip_address": "203.219.66.5"
+}, {
+  "id": 14,
+  "first_name": "Dacey",
+  "last_name": "Coutts",
+  "email": "dcouttsd@google.ca",
+  "gender": "Female",
+  "ip_address": "38.135.227.108"
+}, {
+  "id": 15,
+  "first_name": "Etty",
+  "last_name": "Douberday",
+  "email": "edouberdaye@house.gov",
+  "gender": "Female",
+  "ip_address": "172.53.60.73"
+}, {
+  "id": 16,
+  "first_name": "Truda",
+  "last_name": "Venny",
+  "email": "tvennyf@cornell.edu",
+  "gender": "Female",
+  "ip_address": "46.230.152.144"
+}, {
+  "id": 17,
+  "first_name": "Kelsy",
+  "last_name": "Mathen",
+  "email": "kmatheng@hp.com",
+  "gender": "Female",
+  "ip_address": "253.202.133.207"
+}, {
+  "id": 18,
+  "first_name": "Phaidra",
+  "last_name": "Snedden",
+  "email": "psneddenh@weather.com",
+  "gender": "Female",
+  "ip_address": "116.97.57.208"
+}, {
+  "id": 19,
+  "first_name": "Yvette",
+  "last_name": "Mattiello",
+  "email": "ymattielloi@indiatimes.com",
+  "gender": "Female",
+  "ip_address": "220.113.98.139"
+}, {
+  "id": 20,
+  "first_name": "Kinnie",
+  "last_name": "Draycott",
+  "email": "kdraycottj@myspace.com",
+  "gender": "Male",
+  "ip_address": "201.201.98.42"
+}, {
+  "id": 21,
+  "first_name": "Malissia",
+  "last_name": "Kemwal",
+  "email": "mkemwalk@cbc.ca",
+  "gender": "Female",
+  "ip_address": "199.152.13.198"
+}, {
+  "id": 22,
+  "first_name": "Eachelle",
+  "last_name": "Sturt",
+  "email": "esturtl@usatoday.com",
+  "gender": "Female",
+  "ip_address": "96.61.205.24"
+}, {
+  "id": 23,
+  "first_name": "Drucie",
+  "last_name": "Dikes",
+  "email": "ddikesm@liveinternet.ru",
+  "gender": "Female",
+  "ip_address": "17.194.17.195"
+}, {
+  "id": 24,
+  "first_name": "Selena",
+  "last_name": "Littrik",
+  "email": "slittrikn@about.com",
+  "gender": "Female",
+  "ip_address": "241.127.47.26"
+}, {
+  "id": 25,
+  "first_name": "Evonne",
+  "last_name": "Geraldini",
+  "email": "egeraldinio@gnu.org",
+  "gender": "Female",
+  "ip_address": "12.9.177.119"
+}];
+
+var femalesCount = _.filter(people, {gender: "Female"}).length;
+console.log("female are: " + femalesCount);
